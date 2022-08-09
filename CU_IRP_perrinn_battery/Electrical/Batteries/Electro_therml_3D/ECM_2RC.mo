@@ -50,7 +50,7 @@ model ECM_2RC
     tableOnFile=true,
     tableName="table",
     fileName=
-        "Z:/OneDrive - The Hong Kong Polytechnic University/Cranfield Studies/4 Course Projects/IRP Battery/A123/A123_OCV_Discharge.mat")
+        "C:/OneDrive - The Hong Kong Polytechnic University/Cranfield Studies/4 Course Projects/IRP Battery/A123/A123_OCV_Discharge.mat")
     annotation (Placement(transformation(extent={{-80,0},{-60,20}})));
   Columb_Counting columb_Counting annotation (Placement(transformation(
         extent={{10,-10},{-10,10}},
@@ -63,8 +63,6 @@ model ECM_2RC
         extent={{-10,-10},{10,10}},
         rotation=180,
         origin={190,10})));
-  Columb_Counting columb_Counting1
-    annotation (Placement(transformation(extent={{160,80},{180,100}})));
 equation
   connect(R1.p, R0.n) annotation (Line(points={{40,70},{30,70},{30,50},{20,50}},
         color={0,0,255}));
