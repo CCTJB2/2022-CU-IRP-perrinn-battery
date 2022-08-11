@@ -61,6 +61,5 @@ equation
           extent={{120,40},{220,0}},
           lineColor={28,108,200},
           textString="SoC")}), Diagram(coordinateSystem(preserveAspectRatio=
-            false), graphics={Rectangle(extent={{-100,100},{100,-100}},
-            lineColor={28,108,200})}));
+            false)));
 end Columb_Counting;
