@@ -1,4 +1,3 @@
 within CU_IRP_perrinn_battery.Electrical.Batteries;
-package Electro_therml_3D
-  
-end Electro_therml_3D;
+package SoC_Estimation
+end SoC_Estimation;

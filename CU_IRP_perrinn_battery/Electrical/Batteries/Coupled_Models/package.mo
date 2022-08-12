@@ -1,4 +1,4 @@
 within CU_IRP_perrinn_battery.Electrical.Batteries;
-package Electro_therml_3D
+package Coupled_Models
   
-end Electro_therml_3D;
+end Coupled_Models;

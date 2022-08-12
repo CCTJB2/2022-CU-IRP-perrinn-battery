@@ -1,4 +1,4 @@
-within CU_IRP_perrinn_battery.Electrical.Batteries.Electro_therml_3D;
+within CU_IRP_perrinn_battery.Electrical.Batteries.Coupled_Models.Static;
 model ECM_Chem_Ex_298K
   Modelica.Electrical.Spice3.Basic.R_Resistor Rcc_A(R=1e-3)
     annotation (Placement(transformation(extent={{0,0},{-20,20}})));
@@ -52,7 +52,8 @@ model ECM_Chem_Ex_298K
     fileName=
         "C:/Users/jason/OneDrive - The Hong Kong Polytechnic University/Cranfield Studies/4 Course Projects/IRP Battery/A123/A123_OCV_Discharge.mat")
     annotation (Placement(transformation(extent={{-80,-40},{-60,-20}})));
-  Columb_Counting columb_Counting annotation (Placement(transformation(
+  SoC_Estimation.Columb_Counting columb_Counting annotation (Placement(
+        transformation(
         extent={{10,-10},{-10,10}},
         rotation=0,
         origin={68,134})));
@@ -151,14 +152,8 @@ model ECM_Chem_Ex_298K
         extent={{10,10},{-10,-10}},
         rotation=0,
         origin={200,30})));
-  Modelica.Blocks.Interfaces.RealInput u
-    annotation (Placement(transformation(extent={{-80,100},{-60,120}})));
   Modelica.Blocks.Interfaces.RealOutput y
     annotation (Placement(transformation(extent={{332,-40},{352,-20}})));
-  Modelica.Blocks.Sources.RealExpression realExpression
-    annotation (Placement(transformation(extent={{80,-48},{100,-28}})));
-  Modelica.Blocks.Interaction.Show.RealValue realValue
-    annotation (Placement(transformation(extent={{-40,100},{-20,120}})));
 equation
   connect(LoadCurrent.n, ground.p)
     annotation (Line(points={{290,-40},{290,-60},{50,-60}},
@@ -187,8 +182,8 @@ equation
     annotation (Line(points={{270,20},{270,140},{78.2,140}}, color={0,0,127}));
   connect(currentSensor.n, LoadCurrent.p)
     annotation (Line(points={{280,10},{290,10},{290,-20}},color={0,0,255}));
-  connect(columb_Counting.DoD, DoD_OCV.u) annotation (Line(points={{58,140},{
-          -92,140},{-92,-30},{-82,-30}},
+  connect(columb_Counting.DoD, DoD_OCV.u) annotation (Line(points={{57,139},{
+          -92,139},{-92,-30},{-82,-30}},
                                        color={0,0,127}));
   connect(OCV.n, ground.p)
     annotation (Line(points={{-40,-40},{-40,-60},{50,-60}}, color={0,0,255}));

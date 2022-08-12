@@ -1,14 +1,14 @@
-within CU_IRP_perrinn_battery.Electrical.Batteries;
+within CU_IRP_perrinn_battery.Electrical.Batteries.SoC_Estimation;
 model Columb_Counting
   Modelica.Blocks.Interfaces.RealOutput DoD annotation (Placement(
-        transformation(extent={{80,0},{100,20}}), iconTransformation(extent={{
-            80,40},{120,80}})));
+        transformation(extent={{80,0},{100,20}}), iconTransformation(extent={{100,40},
+            {120,60}})));
   Modelica.Blocks.Interfaces.RealInput Iload_A annotation (Placement(
         transformation(extent={{-110,-10},{-90,10}}), iconTransformation(extent=
            {{-122,40},{-82,80}})));
   Modelica.Blocks.Interfaces.RealOutput SoC annotation (Placement(
-        transformation(extent={{80,-40},{100,-20}}), iconTransformation(extent=
-            {{80,-20},{120,20}})));
+        transformation(extent={{80,-40},{100,-20}}), iconTransformation(extent={{100,-10},
+            {120,10}})));
   Modelica.Blocks.Continuous.Integrator integrator
     annotation (Placement(transformation(extent={{-40,0},{-20,20}})));
   Modelica.Blocks.Math.Division division
