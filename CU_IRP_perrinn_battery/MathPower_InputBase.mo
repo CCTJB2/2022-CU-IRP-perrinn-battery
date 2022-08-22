@@ -7,7 +7,7 @@ block MathPower_InputBase
   Modelica.Blocks.Interfaces.RealOutput y
     annotation (Placement(transformation(extent={{100,-10},{120,10}})));
 equation
-  y = base^power;
+  y = (base) ^ (power);
   annotation (Icon(coordinateSystem(preserveAspectRatio=true, extent={{-100,-100},{100,
             100}}), graphics={
         Text(
